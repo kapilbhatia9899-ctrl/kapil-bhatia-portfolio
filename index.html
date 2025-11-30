@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapil Bhatia - Seeker, Reader, Philanthropist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 1s ease;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .tagline {
+            font-size: 1.4em;
+            color: #764ba2;
+            font-style: italic;
+            margin-top: 15px;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            margin: 30px 0;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h2 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #764ba2;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .book-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .book-card:hover {
+            transform: scale(1.05);
+            border-color: #667eea;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .book-title {
+            font-weight: bold;
+            color: #764ba2;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .values-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .value-item {
+            flex: 1;
+            min-width: 250px;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .value-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(252, 182, 159, 0.4);
+        }
+        
+        .value-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .value-title {
+            font-size: 1.5em;
+            color: #d35400;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .quote {
+            font-size: 1.5em;
+            font-style: italic;
+            color: #764ba2;
+            margin: 30px 0;
+            padding: 30px;
+            background: rgba(118, 75, 162, 0.1);
+            border-left: 5px solid #764ba2;
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .section {
+                padding: 30px 20px;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kapil Bhatia</h1>
+            <p class="tagline">Seeker of Truth • Reader of Wisdom • Servant of Humanity</p>
+            <div style="margin-top: 30px; font-size: 1.2em; color: #555;">
+                "In the pursuit of knowledge and service, we find our true purpose"
+            </div>
+        </header>
+
+        <div class="section">
+            <span class="icon">📚</span>
+            <h2>Literary Passions</h2>
+            <p style="font-size: 1.2em; margin-bottom: 20px;">
+                I immerse myself in the profound depths of non-fiction and psychological literature, 
+                seeking to understand the human condition and the reality that shapes our existence.
+            </p>
+            
+            <div class="books-grid">
+                <div class="book-card">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🧠</div>
+                    <div class="book-title">Psychology</div>
+                    <p>Exploring the depths of human consciousness and behavior</p>
+                </div>
+                <div class="book-card">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🌍</div>
+                    <div class="book-title">Reality & Truth</div>
+                    <p>Understanding the world through factual narratives</p>
+                </div>
+                <div class="book-card">
+                    <div style="font-size: 2em; margin-bottom: 10px;">💭</div>
+                    <div class="book-title">Philosophy</div>
+                    <p>Contemplating existence and meaning</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <span class="icon">🕉️</span>
+            <h2>Spiritual Journey</h2>
+            <p style="font-size: 1.2em; margin-bottom: 20px;">
+                My spiritual path is illuminated by the timeless wisdom of ancient scriptures. 
+                These sacred texts guide my understanding of dharma, karma, and the eternal truth.
+            </p>
+            
+            <div class="books-grid">
+                <div class="book-card">
+                    <div style="font-size: 2em; margin-bottom: 10px;">📖</div>
+                    <div class="book-title">Srimad Bhagavad Gita</div>
+                    <p>The eternal dialogue of dharma and devotion</p>
+                </div>
+                <div class="book-card">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🙏</div>
+                    <div class="book-title">Ramcharitmanas</div>
+                    <p>The sacred journey of Lord Rama</p>
+                </div>
+                <div class="book-card">
+                    <div style="font-size: 2em; margin-bottom: 10px;">✨</div>
+                    <div class="book-title">Srimad Bhagavatam</div>
+                    <p>Stories of divine love and devotion</p>
+                </div>
+            </div>
+            
+            <div class="quote">
+                "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन"<br>
+                <span style="font-size: 0.8em; color: #555;">
+                    You have the right to perform your duty, but not to the fruits thereof
+                </span>
+            </div>
+        </div>
+
+        <div class="section">
+            <span class="icon">❤️</span>
+            <h2>Philanthropy & Service</h2>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">
+                My life's mission is to serve humanity with compassion and generosity. 
+                I believe in sharing knowledge, resources, and love with those who need it most.
+            </p>
+            
+            <div class="values-list">
+                <div class="value-item">
+                    <div class="value-icon">🤝</div>
+                    <div class="value-title">Giving</div>
+                    <p>Supporting those in need through meaningful contributions</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">💡</div>
+                    <div class="value-title">Teaching</div>
+                    <p>Sharing wisdom and knowledge with seekers</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🌱</div>
+                    <div class="value-title">Growing</div>
+                    <p>Continuous self-improvement to serve better</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="text-align: center;">
+            <span class="icon">🌟</span>
+            <h2>My Vision</h2>
+            <p style="font-size: 1.3em; max-width: 800px; margin: 0 auto; line-height: 2;">
+                To become a beacon of light in this world—combining the wisdom of ancient scriptures 
+                with modern psychological understanding, using knowledge as a tool for service, 
+                and dedicating my life to uplifting humanity through compassion, generosity, and spiritual guidance.
+            </p>
+            <div class="quote" style="margin-top: 40px;">
+                "The best way to find yourself is to lose yourself in the service of others"<br>
+                <span style="font-size: 0.8em; color: #555;">— Mahatma Gandhi</span>
+            </div>
+        </div>
+
+        <footer>
+            <h2 style="margin-bottom: 20px;">Connect & Collaborate</h2>
+            <p style="font-size: 1.2em; margin-bottom: 20px;">
+                If you share similar passions or wish to collaborate on philanthropic endeavors, 
+                I'd love to connect with you.
+            </p>
+            <p style="font-size: 1.1em; color: #667eea; font-weight: bold;">
+                📧 kapilbhatia9899@gmail.com
+            </p>
+            <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid #eee; color: #888;">
+                <p>"May we all walk the path of truth, compassion, and service"</p>
+                <p style="margin-top: 10px;">© 2025 Kapil Bhatia • Built with purpose and passion</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
